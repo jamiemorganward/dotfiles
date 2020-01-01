@@ -44,7 +44,6 @@ brew_install() {
 brew_install "coreutils" "coreutils"
 
 # GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed
-brew install findutils
 brew_install "findutils" "findutils"
 
 # GNU `sed`

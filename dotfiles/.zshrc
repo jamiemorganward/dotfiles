@@ -1,7 +1,7 @@
 ZSH_DISABLE_COMPFIX=true
 
 # Oh My ZSH
-export ZSH="/Users/avocado/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
 # Pure prompt, disable theme
@@ -16,6 +16,7 @@ plugins=(
 
 # fpath
 fpath=( "$HOME/.zfunctions" $fpath )
+fpath+=( "$HOME/.nvm/versions/node/v13.5.0/lib/node_modules/pure-prompt/functions" )
 
 # Pure prompt
 # https://github.com/sindresorhus/pure#getting-started

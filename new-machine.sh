@@ -4,8 +4,8 @@ touch $HOME/.extra
 ./install/xcode-select.sh
 ./install/homebrew.sh
 
-# ./brew/brew.sh
-# ./brew/brew-cask.sh
+./brew/brew.sh
+./brew/brew-cask.sh
 
 ./install/node.sh
 
