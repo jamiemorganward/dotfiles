@@ -27,13 +27,13 @@ module.exports = {
         letterSpacing: 0,
 
         // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-        cursorColor: 'rgba(248,28,229,0.8)',
+        // cursorColor: 'rgba(248,28,229,0.8)',
 
         // terminal text color under BLOCK cursor
-        cursorAccentColor: '#000',
+        // cursorAccentColor: '#000',
 
         // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
-        cursorShape: 'BLOCK',
+        cursorShape: 'UNDERLINE',
 
         // set to `true` (without backticks and without quotes) for blinking cursor
         cursorBlink: false,
@@ -123,10 +123,19 @@ module.exports = {
 
         // if `true` (without backticks and without quotes), on right click selected text will be copied or pasted if no
         // selection is present (`true` by default on Windows and disables the context menu feature)
-        // quickEdit: true,
+        quickEdit: false,
+
+        // choose either `'vertical'`, if you want the column mode when Option key is hold during selection (Default)
+        // or `'force'`, if you want to force selection regardless of whether the terminal is in mouse events mode
+        // (inside tmux or vim with mouse mode enabled for example).
+        macOptionSelectionMode: 'vertical',
 
         // URL to custom bell
         // bellSoundURL: 'http://example.com/bell.mp3',
+
+        // Whether to use the WebGL renderer. Set it to false to use canvas-based
+        // rendering (slower, but supports transparent backgrounds)
+        webGLRenderer: true,
 
         // for advanced config flags please refer to https://hyper.is/#cfg
     },
@@ -137,13 +146,13 @@ module.exports = {
     //   `hyperpower`
     //   `@company/project`
     //   `project#1.0.1`
-    // plugins: ["hyper-solarized-light"],
-    // plugins: ["hyperterm-tomorrow-night-eighties"],
+    // plugins: ['hyperterm-tomorrow-night-eighties'],
+    plugins: ['nord-hyper'],
 
     // in development, you can create a directory under
     // `~/.hyper_plugins/local/` and include it here
     // to load it and avoid it being `npm install`ed
-    localPlugins: ['hyperterm-tomorrow-night-eighties'],
+    localPlugins: [],
 
     keymaps: {
         // Example
