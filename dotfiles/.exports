@@ -10,7 +10,7 @@ export LANG="en_NZ"
 
 # Set local homebrew path
 export PATH="$HOME/.homebrew/opt/ncurses/bin:$PATH"
-export PATH=$HOME/.homebrew/bin:$HOME/.homebrew/sbin:$PATH
+PATH=$PATH:~/homebrew/sbin:~/homebrew/bin
 export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="$(brew --prefix)/opt/grep/libexec/gnubin:$PATH"
