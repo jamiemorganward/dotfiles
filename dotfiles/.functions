@@ -162,3 +162,22 @@ function nullify() {
 shellswitch () {
 	chsh -s $(brew --prefix)/bin/$1
 }
+
+# docker exec for composer
+function dexec () {
+	if [ -f "docker-compose.yml" ]; then
+		CONTAINER_NAME=$(grep -m 1 "\-php" docker-compose.yml | sed -e 's/[[:space:]]*//g' -e 's/://g')
+
+		sh -c "docker exec $CONTAINER_NAME $*"
+	fi
+}
+
+# docker exec for composer
+function tinker () {
+	if [ -f "docker-compose.yml" ]; then
+		CONTAINER_NAME=$(grep -m 1 "\-php" docker-compose.yml | sed -e 's/[[:space:]]*//g' -e 's/://g')
+
+		sh -c "docker exec -it $CONTAINER_NAME php artisan tinker $*"
+	fi
+}
+

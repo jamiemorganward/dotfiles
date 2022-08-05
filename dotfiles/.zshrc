@@ -17,6 +17,7 @@ plugins=(
 # fpath
 fpath=( "$HOME/.zfunctions" $fpath )
 fpath+=( "$HOME/.nvm/versions/node/v13.5.0/lib/node_modules/pure-prompt/functions" )
+path+=( "$HOME/.composer/vendor/bin" )
 
 # Pure prompt
 # https://github.com/sindresorhus/pure#getting-started
@@ -41,3 +42,10 @@ HISTFILE=$HOME/.history
 
 # zsh-syntax-highlighting
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export HOMEBREW_GITHUB_API_TOKEN=91984a80b7d39325363e7a159bfbf2a1e1447445
+
+export PATH
+# Hook for desk activation
+[ -n "$DESK_ENV" ] && source "$DESK_ENV" || true
+
+export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk

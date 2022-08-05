@@ -90,10 +90,14 @@ alias bus="beam up staging"
 alias bul="beam up staging"
 
 # docker shortcuts
-alias dup="docker-compose up -d"
-alias ddown="docker-compose down"
+alias dup="docker compose up -d"
+alias ddown="docker compose down"
 
 # vscode
 project() {
     code ~/Sites/vscode-projects/$1.code-workspace
 }
+
+alias dl="aria2c --file-allocation=none"
+
+alias add-jira-hook cp ~/.git_template/hooks/prepare-commit-msg .git/hooks/
