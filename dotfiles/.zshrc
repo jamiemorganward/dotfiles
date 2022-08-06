@@ -16,7 +16,7 @@ plugins=(
 
 # fpath
 fpath=( "$HOME/.zfunctions" $fpath )
-fpath+=( "$HOME/.nvm/versions/node/v13.5.0/lib/node_modules/pure-prompt/functions" )
+fpath+=("$HOME/homebrew/share/zsh/site-functions")
 path+=( "$HOME/.composer/vendor/bin" )
 
 # Pure prompt
@@ -49,3 +49,4 @@ export PATH
 [ -n "$DESK_ENV" ] && source "$DESK_ENV" || true
 
 export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
+PATH=$PATH:~/homebrew/sbin:~/homebrew/bin
