@@ -19,7 +19,7 @@ plugins=(
 
 # fpath
 fpath=( "$HOME/.zfunctions" $fpath )
-fpath+=("/usr/local/share/zsh/site-functions")
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
 # path+=( "$HOME/.composer/vendor/bin" )
 
 # Pure prompt
@@ -56,6 +56,6 @@ brew () {
 }
 
 
-source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
+# source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
 export GEM_HOME=$HOME/.gem
 export PATH=$GEM_HOME/bin:$PATH
