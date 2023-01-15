@@ -48,8 +48,6 @@ export PATH
 # Hook for desk activation
 [ -n "$DESK_ENV" ] && source "$DESK_ENV" || true
 
-export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
-
 brew () {
 	PASS_CMD="brew $@"
 	su brew -c "$PASS_CMD"
