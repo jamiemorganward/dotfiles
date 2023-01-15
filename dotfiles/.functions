@@ -58,7 +58,10 @@ cp_p () {
   rsync -WavP --human-readable --progress $1 $2
 }
 
-
+gac () {
+	git add -A;
+	git commit -m $1;
+}
 
 # get gzipped size
 function gz() {

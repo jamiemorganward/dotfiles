@@ -9,13 +9,18 @@ export LC_ALL="en_NZ.UTF-8"
 export LANG="en_NZ"
 
 # Set local homebrew path
-PATH="$(brew --prefix)/opt/findutils/libexec/gnubin:$PATH"
-PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
-PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
-PATH="$(brew --prefix)/opt/grep/libexec/gnubin:$PATH"
-PATH="$(brew --prefix)/opt/findutils/libexec/gnubin:$PATH"
-PATH="$(brew --prefix)/opt/gettext/libexec/:$PATH"
-PATH="$(brew --prefix)/opt/python/libexec/:$PATH"
+export PATH="$HOME/homebrew/opt/ncurses/bin:$PATH"
+export PATH="$HOME/homebrew/sbin:$HOME/homebrew/bin:$PATH"
+export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="$(brew --prefix)/opt/grep/libexec/gnubin:$PATH"
+export PATH="$(brew --prefix)/opt/findutils/libexec/gnubin:$PATH"
+export PATH="$(brew --prefix)/opt/gettext/libexec/:$PATH"
+export PATH="$(brew --prefix)/opt/python/libexec/:$PATH"
+
+export SDKROOT=$(xcrun -sdk macosx --show-sdk-path)
+
+export CHROME_EXECUTABLE="/Users/jamie/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1

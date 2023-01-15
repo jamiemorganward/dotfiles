@@ -101,3 +101,4 @@ project() {
 alias dl="aria2c --file-allocation=none"
 
 alias add-jira-hook cp ~/.git_template/hooks/prepare-commit-msg .git/hooks/
+alias blitz="ddown && rm -rf .graphql-generated public vendor silverstripe.log && git checkout public && dup --build && dexec composer install && dexec vendor/bin/sake dev/build flush=1"

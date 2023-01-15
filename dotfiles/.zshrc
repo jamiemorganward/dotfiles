@@ -1,5 +1,8 @@
 ZSH_DISABLE_COMPFIX=true
 
+# Source non-zsh dotfiles
+source ~/.bash_profile
+
 # Oh My ZSH
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
@@ -32,9 +35,6 @@ auto-ls () {
 }
 chpwd_functions=( auto-ls $chpwd_functions )
 
-# Source non-zsh dotfiles
-source ~/.bash_profile
-
 # Better history
 HISTORY_IGNORE="(exit|ls|bg|fg|history|clear)"
 SAVEHIST=$HISTSIZE
@@ -56,4 +56,6 @@ brew () {
 }
 
 
-source /Users/jamiemorganward/.docker/init-zsh.sh || true # Added by Docker Desktop
+source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH

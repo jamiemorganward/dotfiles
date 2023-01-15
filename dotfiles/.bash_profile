@@ -48,4 +48,4 @@ export NVM_DIR="$HOME/.nvm"
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-source /Users/jamiemorganward/.docker/init-bash.sh || true # Added by Docker Desktop
+source $HOME/.docker/init-bash.sh || true # Added by Docker Desktop
