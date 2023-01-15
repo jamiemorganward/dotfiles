@@ -16,8 +16,8 @@ plugins=(
 
 # fpath
 fpath=( "$HOME/.zfunctions" $fpath )
-fpath+=("$HOME/homebrew/share/zsh/site-functions")
-path+=( "$HOME/.composer/vendor/bin" )
+fpath+=("/usr/local/share/zsh/site-functions")
+# path+=( "$HOME/.composer/vendor/bin" )
 
 # Pure prompt
 # https://github.com/sindresorhus/pure#getting-started
@@ -49,4 +49,11 @@ export PATH
 [ -n "$DESK_ENV" ] && source "$DESK_ENV" || true
 
 export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
-PATH=$PATH:~/homebrew/sbin:~/homebrew/bin
+
+brew () {
+	PASS_CMD="brew $@"
+	su brew -c "$PASS_CMD"
+}
+
+
+source /Users/jamiemorganward/.docker/init-zsh.sh || true # Added by Docker Desktop
